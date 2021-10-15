@@ -4,8 +4,6 @@ package baseline;
 import java.util.List;
 
 public class TableFormat {
-    /*
-}
     public String makeTable (List<String> list){
         //Create start of table.
         StringBuilder result = new StringBuilder("""
@@ -37,6 +35,6 @@ public class TableFormat {
     public String[] splitLine(String nameLine){
         //Split the line at ',' and return a set that includes the Firstname, Lastname, and Salary.
         return nameLine.split(",",3);
-    /*
+
     }
 }

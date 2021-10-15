@@ -3,9 +3,8 @@ package baseline;
 import java.util.List;
 
 public class Solution42 {
-    /*
     public static void main(String[] args) {
-        Call Read file
+        //Use the fileReader to get a list of names.
         Read input = new Read();
         input.makeFileReader();
         input.readFile();
@@ -18,5 +17,5 @@ public class Solution42 {
         //Print the result.
         System.out.print(result);
     }
-     */
 }
+

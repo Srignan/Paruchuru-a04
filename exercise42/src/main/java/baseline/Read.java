@@ -6,19 +6,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Read {
-    /*
-    //Read and make list to hold data
 
+    //We will use a reader and an ArrayList to hold all the lines of information.
+    private static BufferedReader br;
     ArrayList<String> listOfNames = new ArrayList<>();
 
     public List<String> getList(){
         return listOfNames;
     }
-        *Make the filereader -
+
     public void makeFileReader(){
+        //Make the file reader.
         try{
             br = new BufferedReader(
-                    new FileReader("exercise42_input.txt"));
+                    new FileReader("D:\\Java related\\Assignment04\\exercise42\\data\\exercise42_input.txt"));
+                        //I tried exercise42_input, but for some reason it is not working, so I had to write the full address
         }catch(Exception ex){
             System.out.print("Can't find file.");
         }
@@ -44,7 +46,5 @@ public class Read {
         }
 
         return result;
-
     }
-     */
 }
