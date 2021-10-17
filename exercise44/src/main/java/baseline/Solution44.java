@@ -1,10 +1,14 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 Srignan Paruchuru
+ */
 package baseline;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class Solution44 {
-    /*
+
     private static final Scanner in = new Scanner(System.in);
     private static final ProductSearch test = new ProductSearch();
 
@@ -38,4 +42,3 @@ public class Solution44 {
         System.out.println("Quantity: "+list.get(2));
     }
 }
- */
