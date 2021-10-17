@@ -4,18 +4,18 @@
 class App{
 }
 
-class findAndReplace{
+class ReplaceWord{
     - Path fileName
     + getFile void()
     + replace String()
 }
 
-class outputToFile{
+class CreateFile{
     - Scanner in
     + askFilePath String()
     + writeOut void(String fileText)
 }
 
 
-App o-> findAndReplace
+App o-> ReplaceWord
 @enduml

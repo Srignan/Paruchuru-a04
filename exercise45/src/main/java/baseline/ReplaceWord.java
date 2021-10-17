@@ -29,3 +29,25 @@ public String replace(String fileText){
     return fileText;
     }
  */
+public class ReplaceWord {
+    private static final Path filePath = Paths.get("D:\\Java related\\Assignment04\\exercise45\\data\\exercise45_input.txt");
+
+    public String getFile(){
+        String fileText;
+
+        //Turn the file text into a string.
+        try {
+            fileText = Files.readString(filePath);
+        }catch(Exception ex){
+            fileText = "Cannot find file.";
+        }
+
+        return fileText;
+    }
+
+    public String replace(String fileText){
+        fileText = fileText.replaceAll("utilize","use");
+
+        return fileText;
+    }
+}

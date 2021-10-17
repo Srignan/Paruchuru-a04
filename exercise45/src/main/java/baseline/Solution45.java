@@ -15,4 +15,11 @@ public class Solution45 {
         outputToFile write = new outputToFile()
         writer.writeOut(text);
      */
+    public static void main(String[] args){
+        ReplaceWord run = new ReplaceWord();
+        String text = run.getFile();
+        text = run.replace(text);
+        CreateFile writer = new CreateFile();
+        writer.writeOut(text);
+    }
 }

@@ -11,7 +11,6 @@ import java.util.Scanner;
 
 
 public class CreateFile {
-    /*
     private static final Scanner in = new Scanner(System.in);
 
     public void writeOut(String fileText){
@@ -31,5 +30,3 @@ public class CreateFile {
         return in.next();
     }
 }
-
-     */
