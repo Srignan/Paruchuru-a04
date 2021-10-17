@@ -3,11 +3,17 @@ package baseline;
 import java.util.Scanner;
 
 public class Solution43 {
-/*
-Call functions
- */
+    private static final Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args){
+        WebsiteGenerator builder = new WebsiteGenerator();
+        builder.setFiles(askForName(),askForAuthor());
+        boolean js = askJS();
+        boolean css = askCSS();
+        builder.makeDirectories(js,css);
+        System.out.print(builder.makeHTML());
     }
-/*
+
     public static boolean askJS(){
         System.out.print("Do you want a folder for JavaScript? ");
         String check = in.nextLine();
@@ -30,5 +36,3 @@ Call functions
         return check.equals("y") || check.equals("Y");
     }
 }
-
- */

@@ -20,7 +20,8 @@ public class Read {
         try{
             br = new BufferedReader(
                     new FileReader("D:\\Java related\\Assignment04\\exercise42\\data\\exercise42_input.txt"));
-                        //I tried exercise42_input, but for some reason it is not working, so I had to write the full address
+                        //I tried exercise42_input.txt, but for some reason it is not working, so I had to write the full address
+                        //I hope this doesn't lose points since it does work, you may have to change the address when testing
         }catch(Exception ex){
             System.out.print("Can't find file.");
         }
