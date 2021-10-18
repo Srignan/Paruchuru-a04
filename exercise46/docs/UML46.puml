@@ -1,11 +1,18 @@
 @startuml
 'https://plantuml.com/sequence-diagram
 
-autonumber
+class App{
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+class countWords{
+    - Path filePath
+    + parseFile String ()
+    + removeLineBreaks String(String input)
+    + makeList ArrayList<String> (String input))
+    + removeBlanks ArrayList<String>(ArrayList<String> input)
+    + countWords ArrayList<Map <String, int>> (ArrayList<String> text)
+    + makeChart String (ArrayList<Map <String, int>>)
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+App o-> countWords
 @enduml
