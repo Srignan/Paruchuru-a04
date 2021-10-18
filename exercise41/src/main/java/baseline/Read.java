@@ -1,17 +1,12 @@
 package baseline;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-
-public class Read
+class Read
 {
-    public static List<String> getnames() throws Exception
-    {
+    public static List<String> collectNames() throws IOException {
         File file = new File("D:\\Java related\\Assignment04\\exercise41\\data\\exercise41_input.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
@@ -22,15 +17,15 @@ public class Read
         return namelist;
     }
 
-    public static int  getcount()throws Exception
+    public static int  numberOfNames()
     {
         File file = new File("D:\\Java related\\Assignment04\\exercise41\\data\\exercise41_input.txt");
-        int count;
+        int count = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            count = 0;
             while (br.readLine() != null) count++;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
         return count;
     }
 }
- */

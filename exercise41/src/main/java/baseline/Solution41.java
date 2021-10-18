@@ -7,18 +7,15 @@ package baseline;
 
 import java.util.*;
 
-/*
 public class Solution41
 {
     public static void main(String[] args) throws Exception
     {
         List<String> names;
-        names = Read.getnames();
+        names = Read.collectNames();
 
-        int count = Read.getcount();
+        int count = Read.numberOfNames();
         Collections.sort(names);
-        Write.write_to_file(names,count);
+        Write.fileWriter(names,count);
     }
 }
-
- */

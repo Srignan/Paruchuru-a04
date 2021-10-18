@@ -12,31 +12,27 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 
-/*
-
 public class Write
 {
-    public static void write_to_file(List<String> namelist, int count) {
+    public static void fileWriter(List<String> namelist, int count) {
         try {
-            BufferedWriter f_writer = new BufferedWriter(new FileWriter("D:\\Java related\\Assignment04\\exercise41\\data\\exercise41_output.txt"));
+            BufferedWriter fileWriter = new BufferedWriter(new FileWriter("D:\\Java related\\Assignment04\\exercise41\\data\\exercise41_output.txt"));
             String newline = "\r\n";
             String ct = Integer.toString(count);
             String firstLine = "Total of "+ ct +" names \r\n";
-            f_writer.write(firstLine);
-            f_writer.write("----------------- \r\n");
+            fileWriter.write(firstLine);
+            fileWriter.write("----------------- \r\n");
 
             for(String counter: namelist){
                 System.out.println(counter);
-                f_writer.write(counter);
-                f_writer.write(newline);
+                fileWriter.write(counter);
+                fileWriter.write(newline);
             }
-            System.out.print("File is created successfully with the content.");
-            f_writer.close();
+            System.out.print("File is created successfully.");
+            fileWriter.close();
         }
         catch (IOException e) {
             System.out.print(e.getMessage());
         }
     }
 }
-
- */

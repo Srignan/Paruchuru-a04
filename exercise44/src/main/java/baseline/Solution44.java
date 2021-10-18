@@ -4,41 +4,47 @@
  */
 package baseline;
 
+import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
+
+
 public class Solution44 {
-
     private static final Scanner in = new Scanner(System.in);
-    private static final ProductSearch test = new ProductSearch();
 
-    public static void main(String[] args){
-        test.parseJSON();
-        printProduct(getName());
-    }
+    public static void main(String[] args) throws IOException, ParseException {
+        List<Product> products =  Parser.loadProducts();
 
-    public static String askProduct(){
-        System.out.print("What is the product name? ");
-        return in.next();
-    }
+        String output = "";
 
-    public static List<String> getName(){
-        while(true) {
-            String find = askProduct();
+        while (output.contentEquals("")) {
+            String search = getString();
+            output = searchProducts(products,search);
+            if(!output.contentEquals(""))
+                break;
 
-            //Get the array.
-            List<String> result;
-            result = test.findProductIndex(find);
-
-            if(result.size() == 3){
-                return result;
-            }
             System.out.println("Sorry, that product was not found in our inventory.");
         }
+
+        System.out.println(output);
     }
-    public static void printProduct(List<String> list){
-        System.out.println("Name: "+list.get(0));
-        System.out.println("Price: "+list.get(1));
-        System.out.println("Quantity: "+list.get(2));
+    private static String getString() {
+        System.out.print("What is the product name? ");
+        return in.nextLine();
+    }
+
+    public static String searchProducts(List<Product> products, String query) {
+        String output = "";
+        for	(Product item : products) {
+            if(item.getName().equalsIgnoreCase(query)) {
+                output = "Name: " + item.getName() +
+                        "\nPrice: " + String.format("$%.2f", item.getPRICE()) +
+                        "\nQuantity: " + item.getQUANTITY();
+            }
+        }
+        return output;
     }
 }
